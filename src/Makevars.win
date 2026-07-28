@@ -1,1 +1,1 @@
-PKG_CFLAGS += -std=gnu17
+CFLAGS = -O2 -Wall -std=gnu17 -mfpmath=sse -msse2 -mstackrealign
