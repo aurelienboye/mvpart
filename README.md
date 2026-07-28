@@ -1,0 +1,42 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# mvpart
+
+mvpart fits multivariate regression trees (De’ath 2002). See Section
+4.11 of Borcard et al. (2018) for a nice summary of MRTs.
+
+This is a fork of
+[richardjtelford/mvpart](https://github.com/richardjtelford/mvpart),
+itself a fork of the last archived version of mvpart on
+[CRAN](https://cran.r-project.org/src/contrib/Archive/mvpart/).
+
+The original CRAN version (1.6-2) was archived in 2014, and
+richardjtelford’s fork patched the namespace so it would install on R
+3.6. This fork patches the C source so the package compiles on R 4.6.1.
+
+## Installation
+
+You can install mvpart from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("aurelienboye/mvpart")
+```
+
+If you’re on an older version of R (≤ 4.1.3) and hit unrelated issues
+with this fork, you may also want to try
+[richardjtelford/mvpart](https://github.com/richardjtelford/mvpart) or
+the [original CRAN
+archive](https://cran.r-project.org/src/contrib/Archive/mvpart/)
+directly.
+
+This fork has only been tested for compilation on macOS with R 4.6.1.
+
+## References
+
+Borcard, D., F. Gillet, and P. Legendre. 2018. Numerical Ecology with R.
+2nd edition. Springer, New York, NY.
+
+De’ath, G. 2002. Multivariate regression trees: a new technique for
+modeling species-environment relationships. Ecology 83:1105-1117.
