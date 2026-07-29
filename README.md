@@ -3,6 +3,13 @@
 
 # mvpart
 
+![Version](https://img.shields.io/badge/version-1.6--4-blue)
+![R](https://img.shields.io/badge/R-%3E%3D4.5.1-blue)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)
+![License](https://img.shields.io/badge/license-GPL--2%20%7C%20GPL--3-lightgrey)
+![Last
+commit](https://img.shields.io/github/last-commit/aurelienboye/mvpart)
+
 mvpart fits multivariate regression trees (De’ath 2002). See Section
 4.11 of Borcard et al. (2018) for a nice summary of MRTs.
 
@@ -12,12 +19,12 @@ itself a fork of the last archived version of mvpart on
 [CRAN](https://cran.r-project.org/src/contrib/Archive/mvpart/).
 
 The original CRAN version (1.6-2) was archived in 2014, and
-richardjtelford’s fork patched the namespace so it would install on R
-3.6, but its C source still failed to compile on more recent R versions.
-This fork adds those additional C source patches, and has been confirmed
-working on:
+richardjtelford’s fork (version 1.6-3) patched the namespace so it would
+install on R 3.6, but its C source still failed to compile on more
+recent R versions. This fork adds those additional C source patches, and
+has been confirmed working on:
 
-- **macOS** (Sonoma 14.12.1) - R 4.6.1
+- **macOS** (Sonoma 14.2.1) - R 4.6.1
 - **Windows** - R 4.5.1 and R 4.6.1
 
 No changes were made to the package’s actual statistical logic — only to
