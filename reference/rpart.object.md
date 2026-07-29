@@ -1,0 +1,91 @@
+# Recursive Partitioning and Regression Trees Object
+
+These are objects representing fitted `rpart` trees.
+
+## Structure
+
+The following components must be included in a legitimate `rpart`
+object. Of these, only the `where` component has the same length as the
+data used to fit the `rpart` object.
+
+## Value
+
+- frame:
+
+  data frame with one row for each node in the tree. The `row.names` of
+  `frame` contain the (unique) node numbers that follow a binary
+  ordering indexed by node depth. Elements of `frame` include `var`, the
+  variable used in the split at each node (leaf nodes are denoted by the
+  string `<leaf>`), `n`, the size of each node, `wt`, the sum of case
+  weights for the node, `dev`, the deviance of each node, `yval`, the
+  fitted value of the response at each node, and `splits`, a two column
+  matrix of left and right split labels for each node. All of these are
+  the same as for an `rpart` object.
+
+  Extra response information is in `yval2`, which contains the number of
+  events at the node (poisson), or a matrix containing the fitted class,
+  the class counts for each node and the class probabilities
+  (classification). Also included in the frame are `complexity`, the
+  complexity parameter at which this split will collapse, `ncompete`,
+  the number of competitor splits retained, and `nsurrogate`, the number
+  of surrogate splits retained.
+
+- where:
+
+  vector, the same length as the number of observations in the root
+  node, containing the row number of `frame` corresponding to the leaf
+  node that each observation falls into.
+
+- splits:
+
+  a matrix describing the splits. The row label is the name of the split
+  variable, and columns are `count`, the number of observations sent
+  left or right by the split (for competitor splits this is the number
+  that would have been sent left or right had this split been used, for
+  surrogate splits it is the number missing the primary split variable
+  which were decided using this surrogate), `ncat`, the number of
+  categories or levels for the variable (`+/-1` for a continuous
+  variable), `improve`, which is the improvement in deviance given by
+  this split, or, for surrogates, the concordance of the surrogate with
+  the primary, and `split`, the numeric split point. The last column
+  `adj` gives the adjusted concordance for surrogate splits. For a
+  factor, the `split` column contains the row number of the csplit
+  matrix. For a continuous variable, the sign of `ncat` determines
+  whether the subset `x < cutpoint` or `x > cutpoint` is sent to the
+  left.
+
+- csplit:
+
+  this will be present only if one of the split variables is a factor.
+  There is one row for each such split, and column `i = -1` if this
+  level of the factor goes to the left, `+1` if it goes to the right,
+  and 0 if that level is not present at this node of the tree. For an
+  ordered categorical variable all levels are marked as `R/L`, including
+  levels that are not present.
+
+- method:
+
+  the method used to grow the tree.
+
+- cptable:
+
+  the table of optimal prunings based on a complexity parameter.
+
+- terms:
+
+  an object of mode `expression` and class `term` summarizing the
+  formula. Used by various methods, but typically not of direct
+  relevance to users.
+
+- call:
+
+  an image of the call that produced the object, but with the arguments
+  all named and with the actual formula included as the formula
+  argument. To re-evaluate the call, say `update(tree)`.
+
+  Optional components include the matrix of predictors (`x`) and the
+  response variable (`y`) used to construct the `rpart` object.
+
+## See also
+
+[`rpart`](https://aurelienboye.github.io/mvpart/reference/rpart.md).
