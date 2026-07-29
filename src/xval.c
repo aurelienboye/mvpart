@@ -105,7 +105,7 @@ void xval(int n_xval,  struct cptable *cptable_head,  Sint *x_grp,
     */
     xtree = (struct node *) CALLOC(1, nodesize);
     xtree->num_obs = k;
-    (*rp_init)(k,rp.ytemp, maxcat, error, parms, &temp, 2, rp.wtemp);
+    (*rp_init)(k,rp.ytemp, maxcat, error, parms, &rp.num_resp, 2, rp.wtemp);
     (*rp_eval)(k, rp.ytemp, xtree->response_est, &(xtree->risk),
            rp.wtemp);
     xtree->complexity = xtree->risk;
