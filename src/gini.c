@@ -19,12 +19,11 @@ static int    *tsplit,
           *countn;
 static double *awt,
           *rate;
-static double (*impurity)();
+static double (*impurity)(double);
 
-static double gini_impure1(p) double p; {  return(1 - p*p); }
+static double gini_impure1(double p) {  return(1 - p*p); }
 
-static double gini_impure2(p)
-double p; { if (p==0) return(0.0); else return(-p*log(p)); }
+static double gini_impure2(double p) { if (p==0) return(0.0); else return(-p*log(p)); }
 
 int giniinit(int n,        double **y, int maxcat, char **error, 
          double *parm, int *size,  int who,    double *wt)
