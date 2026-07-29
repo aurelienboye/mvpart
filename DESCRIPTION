@@ -6,12 +6,21 @@ Author: rpart by Terry M Therneau and Beth Atkinson <atkinson@mayo.edu>.
     Extensions and adaptations of rpart to mvpart by Glenn De'ath <g.death@aims.gov.au>.
     Namespace patch for R 3.6 by Richard Telford <richard.telford@uib.no>.
 Maintainer: Aurélien Boyé <aurelien.boye@ifremer.fr>
-URL:https://github.com/aurelienboye/mvpart
-Bugs:https://github.com/aurelienboye/mvpart/issues
+URL: https://github.com/aurelienboye/mvpart
+Bugs: https://github.com/aurelienboye/mvpart/issues
 Description: Fits multivariate regression trees.
 Title: Multivariate partitioning
-Imports: graphics, stats, grDevices
-Suggests: survival
+Imports: 
+    graphics,
+    stats,
+    grDevices,
+    MVPARTwrap (>= 0.1.9.2)
+Suggests: 
+    ade4,
+    knitr,
+    rmarkdown,
+    survival,
+    vegan
 LazyData: yes
 ByteCompile: yes
 License: GPL-2 | GPL-3
@@ -19,3 +28,5 @@ Encoding: UTF-8
 NeedsCompilation: yes
 RoxygenNote: 6.1.1
 Date: 2026-07-29
+Remotes: 
+    cran/MVPARTwrap
