@@ -67,10 +67,14 @@ extern double poissonpred(double *y, double *yhat);
 extern double usersplit_pred(double *y, double *yhat);
     
 static struct {
-    int  (*init_split)();
-    void (*choose_split)();
-    void (*eval)();
-    double (*error)();
+    int    (*init_split)(int n, double *y[], int maxcat, char **error,
+                          double *parm, int *size, int who, double *wt);
+    void   (*choose_split)(int n, double *y[], FLOAT *x, int nclass,
+                            int edge, double *improve, FLOAT *split,
+                            int *csplit, double myrisk, double *wt);
+    void   (*eval)(int n, double *y[], double *value, double *risk,
+                   double *wt);
+    double (*error)(double *y, double *yhat);
       } func_table [] =
          {{anovainit,   anova,   anovass,    anovapred},
           {mrtinit,   mrt,   mrtss,    mrtpred},
