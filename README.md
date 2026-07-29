@@ -13,7 +13,12 @@ itself a fork of the last archived version of mvpart on
 
 The original CRAN version (1.6-2) was archived in 2014, and
 richardjtelford’s fork patched the namespace so it would install on R
-3.6. This fork patches the C source so the package compiles on R 4.6.1.
+3.6, but its C source still failed to compile on more recent R versions.
+This fork adds those additional C source patches, and has been confirmed
+working on:
+
+- **macOS** (Sonoma 14.12.1) - R 4.6.1
+- **Windows** - R 4.5.1 and R 4.6.1
 
 No changes were made to the package’s actual statistical logic — only to
 make the C code compile under R’s modern, stricter header rules.
@@ -33,8 +38,6 @@ with this fork, you may also want to try
 the [original CRAN
 archive](https://cran.r-project.org/src/contrib/Archive/mvpart/)
 directly.
-
-This fork has only been tested for compilation on macOS with R 4.6.1.
 
 ## Companion package: MVPARTwrap
 
