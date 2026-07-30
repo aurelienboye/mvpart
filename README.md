@@ -36,12 +36,19 @@ You can install mvpart from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("aurelienboye/mvpart")
+remotes::install_github("aurelienboye/mvpart", build_vignettes = TRUE)
 ```
 
 The worked example vignette is included and accessible via
 `vignette("mrt-worked-example", package = "mvpart")`, or [readable
 online](https://aurelienboye.github.io/mvpart/articles/mrt-worked-example.html).
+
+If you want a faster installation without the vignette, you can install
+it with:
+
+``` r
+remotes::install_github("aurelienboye/mvpart")
+```
 
 If you’re on an older version of R (≤ 4.1.3) and hit unrelated issues
 with this fork, you may also want to try
