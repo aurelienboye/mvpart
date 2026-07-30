@@ -8,8 +8,6 @@
   - Linux (Ubuntu, via GitHub Actions)
 * Root cause: several old C constructs (empty-parameter function pointer declarations, K&R-style function definitions, removed S-compatibility macros/types) that R's headers used to tolerate are rejected under the C23 standard R 4.5+ selects by default on Windows. Fixes were prototype/declaration additions or macro renames; two genuine latent type-mismatch bugs were also found and fixed (`s_xpred.c`, `xval.c`), confirmed to have zero effect on results.
 * No changes were made to the package's statistical logic.
-* Updated `Maintainer`, `URL`, and `Bugs` fields to point to this fork.
-* Moved `MVPARTwrap` from `Imports` to `Suggests` (it was creating a circular dependency, since `MVPARTwrap` itself depends on `mvpart`).
 * Added a worked-example vignette (`mrt-worked-example`), using the Doubs fish dataset, demonstrating a full MRT workflow together with `MVPARTwrap`.
 
 # mvpart 1.6-3

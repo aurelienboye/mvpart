@@ -1,4 +1,8 @@
 url: https://aurelienboye.github.io/mvpart/
 template:
   bootstrap: 5
+  bootswatch: flatly
+authors:
+  sidebar:
+    roles: [aut, ctb, cre]
 
