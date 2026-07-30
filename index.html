@@ -72,15 +72,18 @@
 <p>You can install mvpart from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"aurelienboye/mvpart"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"aurelienboye/mvpart"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p>The worked example vignette is included and accessible via <code><a href="articles/mrt-worked-example.html">vignette("mrt-worked-example", package = "mvpart")</a></code>, or <a href="https://aurelienboye.github.io/mvpart/articles/mrt-worked-example.html">readable online</a>.</p>
+<p>If you want a faster installation without the vignette, you can install it with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"aurelienboye/mvpart"</span><span class="op">)</span></span></code></pre></div>
 <p>If you’re on an older version of R (≤ 4.1.3) and hit unrelated issues with this fork, you may also want to try <a href="https://github.com/richardjtelford/mvpart" class="external-link">richardjtelford/mvpart</a> or the <a href="https://cran.r-project.org/src/contrib/Archive/mvpart/" class="external-link">original CRAN archive</a> directly.</p>
 </div>
 <div class="section level2">
 <h2 id="companion-package-mvpartwrap">Companion package: MVPARTwrap<a class="anchor" aria-label="anchor" href="#companion-package-mvpartwrap"></a>
 </h2>
 <p><a href="https://github.com/cran/MVPARTwrap" class="external-link">MVPARTwrap</a> adds several tools for interpreting and extending MRT models: identifying the discriminant species at each node, partitioning the total species variance across the tree and its splits, computing an adjusted R² for an MRT model, running cascade MRT analyses, and producing an alternative graphical representation of the tree (Ouellette et al. 2012). Unlike <code>mvpart</code>, it’s a pure-R package (no C source), so it installs on modern R without any of the patches above, as long as this fork of <code>mvpart</code> is installed first:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install mvpart first (see above), then:</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"cran/MVPARTwrap"</span><span class="op">)</span></span></code></pre></div>
 </div>
