@@ -21,6 +21,7 @@ Suggests:
     rmarkdown,
     survival,
     vegan
+VignetteBuilder: knitr
 LazyData: yes
 ByteCompile: yes
 License: GPL-2 | GPL-3

@@ -44,6 +44,8 @@ To also build the vignettes locally (so they’re accessible via
 
 ``` r
 remotes::install_github("aurelienboye/mvpart", build_vignettes = TRUE)
+
+vignette("mrt-worked-example", package = "mvpart")
 ```
 
 Beware that building the vignettes also requires installing a few
