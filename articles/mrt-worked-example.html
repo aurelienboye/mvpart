@@ -84,8 +84,7 @@ ordination techniques should consult that book directly.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/aurelienboye/mvpart" class="external-link">mvpart</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adeverse.github.io/ade4/" class="external-link">ade4</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vegandevs.github.io/vegan/" class="external-link">vegan</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Le chargement a nécessité le package : permute</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://vegandevs.github.io/vegan/" class="external-link">vegan</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="the-data">The data<a class="anchor" aria-label="anchor" href="#the-data"></a>
@@ -171,10 +170,8 @@ variables as candidate splitters.</p>
 <span><span class="co">#&gt; Minimum tree sizes</span></span>
 <span><span class="co">#&gt; tabmins</span></span>
 <span><span class="co">#&gt;  2  3  4  6  7  8  9 </span></span>
-<span><span class="co">#&gt;  5  4  4  1  1 31 54</span></span></code></pre></div>
-<div class="float">
-<img src="figure/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8"><div class="figcaption">plot of chunk unnamed-chunk-8</div>
-</div>
+<span><span class="co">#&gt;  1  6  1  1  1 40 50</span></span></code></pre></div>
+<p><img src="figure/unnamed-chunk-7-1.png"></p>
 <p>The <code>xv</code> argument controls how the final tree size is
 chosen. <code>"pick"</code> lets you click interactively on the
 cross-validation plot (useful in an interactive session, but not
@@ -211,9 +208,7 @@ groups much better than others).</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">mrt</span>, type <span class="op">=</span> <span class="st">"matrix"</span><span class="op">)</span>,</span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/residuals.html" class="external-link">residuals</a></span><span class="op">(</span><span class="va">mrt</span><span class="op">)</span>,main <span class="op">=</span> <span class="st">"Residuals vs Predicted"</span><span class="op">)</span> </span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h <span class="op">=</span> <span class="fl">0</span>, lty <span class="op">=</span> <span class="fl">3</span>, col <span class="op">=</span> <span class="st">"grey"</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="figure/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9"><div class="figcaption">plot of chunk unnamed-chunk-9</div>
-</div>
+<p><img src="figure/unnamed-chunk-8-1.png"></p>
 </div>
 <div class="section level2">
 <h2 id="interpreting-the-groups-mvpartwrap">Interpreting the groups: MVPARTwrap<a class="anchor" aria-label="anchor" href="#interpreting-the-groups-mvpartwrap"></a>
@@ -239,9 +234,7 @@ convenient way to see at a glance how much of the total variance each
 partition accounts for.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/MVPARTwrap/man/help_plotMRT.html" class="external-link">plot.MRT</a></span><span class="op">(</span><span class="va">mrt.wrap</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="figure/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11"><div class="figcaption">plot of chunk unnamed-chunk-11</div>
-</div>
+<p><img src="figure/unnamed-chunk-10-1.png"></p>
 <p>The summary of <code><a href="https://rdrr.io/pkg/MVPARTwrap/man/help_summaryMRT.html" class="external-link">summary.MRT()</a></code>typically reports, for each
 terminal group of sites: the number of sites, the within-group sum of
 squares, and the species that contribute most strongly to distinguishing
@@ -265,8 +258,8 @@ that group from the others.</p>
 <span><span class="co">#&gt;      cluster indicator_value probability</span></span>
 <span><span class="co">#&gt; Satr       1          0.9128       0.001</span></span>
 <span><span class="co">#&gt; Phph       1          0.8258       0.001</span></span>
-<span><span class="co">#&gt; Neba       1          0.7535       0.002</span></span>
-<span><span class="co">#&gt; Cogo       1          0.4036       0.021</span></span>
+<span><span class="co">#&gt; Neba       1          0.7535       0.001</span></span>
+<span><span class="co">#&gt; Cogo       1          0.4036       0.026</span></span>
 <span><span class="co">#&gt; Alal       2          0.9729       0.001</span></span>
 <span><span class="co">#&gt; Acce       2          0.9231       0.001</span></span>
 <span><span class="co">#&gt; Chna       2          0.7994       0.001</span></span>
@@ -276,18 +269,18 @@ that group from the others.</p>
 <span><span class="co">#&gt; Rham       2          0.7432       0.001</span></span>
 <span><span class="co">#&gt; Anan       2          0.7366       0.001</span></span>
 <span><span class="co">#&gt; Gogo       2          0.7289       0.001</span></span>
-<span><span class="co">#&gt; Cyca       2          0.6998       0.002</span></span>
+<span><span class="co">#&gt; Cyca       2          0.6998       0.001</span></span>
 <span><span class="co">#&gt; Scer       2          0.6942       0.001</span></span>
 <span><span class="co">#&gt; Abbr       2          0.6923       0.001</span></span>
-<span><span class="co">#&gt; Spbi       2          0.6200       0.002</span></span>
-<span><span class="co">#&gt; Baba       2          0.6170       0.005</span></span>
-<span><span class="co">#&gt; Eslu       2          0.5892       0.009</span></span>
-<span><span class="co">#&gt; Titi       2          0.5658       0.026</span></span>
-<span><span class="co">#&gt; Icme       2          0.5385       0.001</span></span>
-<span><span class="co">#&gt; Pefl       2          0.5268       0.023</span></span>
-<span><span class="co">#&gt; Chto       2          0.4803       0.023</span></span>
+<span><span class="co">#&gt; Spbi       2          0.6200       0.005</span></span>
+<span><span class="co">#&gt; Baba       2          0.6170       0.007</span></span>
+<span><span class="co">#&gt; Eslu       2          0.5892       0.018</span></span>
+<span><span class="co">#&gt; Titi       2          0.5658       0.017</span></span>
+<span><span class="co">#&gt; Icme       2          0.5385       0.002</span></span>
+<span><span class="co">#&gt; Pefl       2          0.5268       0.029</span></span>
+<span><span class="co">#&gt; Chto       2          0.4803       0.019</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Sum of probabilities                 =  0.834</span></span>
+<span><span class="co">#&gt; Sum of probabilities                 =  0.867</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Sum of Indicator Values              =  17.76</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -317,8 +310,8 @@ that group from the others.</p>
 <span><span class="co">#&gt;      cluster indicator_value probability</span></span>
 <span><span class="co">#&gt; Satr       1          0.9128       0.001</span></span>
 <span><span class="co">#&gt; Phph       1          0.8258       0.001</span></span>
-<span><span class="co">#&gt; Neba       1          0.7535       0.001</span></span>
-<span><span class="co">#&gt; Cogo       1          0.4036       0.015</span></span>
+<span><span class="co">#&gt; Neba       1          0.7535       0.002</span></span>
+<span><span class="co">#&gt; Cogo       1          0.4036       0.022</span></span>
 <span><span class="co">#&gt; Alal       2          0.9729       0.001</span></span>
 <span><span class="co">#&gt; Acce       2          0.9231       0.001</span></span>
 <span><span class="co">#&gt; Chna       2          0.7994       0.001</span></span>
@@ -331,15 +324,15 @@ that group from the others.</p>
 <span><span class="co">#&gt; Cyca       2          0.6998       0.001</span></span>
 <span><span class="co">#&gt; Scer       2          0.6942       0.001</span></span>
 <span><span class="co">#&gt; Abbr       2          0.6923       0.001</span></span>
-<span><span class="co">#&gt; Spbi       2          0.6200       0.004</span></span>
-<span><span class="co">#&gt; Baba       2          0.6170       0.005</span></span>
-<span><span class="co">#&gt; Eslu       2          0.5892       0.018</span></span>
-<span><span class="co">#&gt; Titi       2          0.5658       0.018</span></span>
-<span><span class="co">#&gt; Icme       2          0.5385       0.003</span></span>
-<span><span class="co">#&gt; Pefl       2          0.5268       0.021</span></span>
-<span><span class="co">#&gt; Chto       2          0.4803       0.024</span></span>
+<span><span class="co">#&gt; Spbi       2          0.6200       0.005</span></span>
+<span><span class="co">#&gt; Baba       2          0.6170       0.003</span></span>
+<span><span class="co">#&gt; Eslu       2          0.5892       0.017</span></span>
+<span><span class="co">#&gt; Titi       2          0.5658       0.023</span></span>
+<span><span class="co">#&gt; Icme       2          0.5385       0.002</span></span>
+<span><span class="co">#&gt; Pefl       2          0.5268       0.029</span></span>
+<span><span class="co">#&gt; Chto       2          0.4803       0.022</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Sum of probabilities                 =  0.8</span></span>
+<span><span class="co">#&gt; Sum of probabilities                 =  0.819</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Sum of Indicator Values              =  17.76</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -372,9 +365,7 @@ resulting groups along the river itself:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">xy</span>, pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer</a></span><span class="op">(</span><span class="va">groups</span><span class="op">)</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">legend</a></span><span class="op">(</span><span class="st">"topleft"</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/levels.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">groups</span><span class="op">)</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">groups</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>       pch <span class="op">=</span> <span class="fl">19</span>, title <span class="op">=</span> <span class="st">"Group"</span>, bty <span class="op">=</span> <span class="st">"n"</span><span class="op">)</span></span></code></pre></div>
-<div class="float">
-<img src="figure/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13"><div class="figcaption">plot of chunk unnamed-chunk-13</div>
-</div>
+<p><img src="figure/unnamed-chunk-12-1.png"></p>
 </div>
 <div class="section level2">
 <h2 id="going-further">Going further<a class="anchor" aria-label="anchor" href="#going-further"></a>

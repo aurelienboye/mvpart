@@ -57,14 +57,14 @@ Returns a formula.
 data(spider)
 makeform(spider,1,13:18)
 #> arct.lute ~ water + sand + moss + reft + twigs + herbs
-#> <environment: 0x55e409a3ca08>
+#> <environment: 0x555b9aa03148>
 # arct.lute ~ water + sand + moss + reft + twigs + herbs
 
 makeform(spider,1:12,13:18)
 #> cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, 
 #>     aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, 
 #>     arct.peri) ~ water + sand + moss + reft + twigs + herbs
-#> <environment: 0x55e4099411d0>
+#> <environment: 0x555b9a920938>
 # cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, 
 # aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, 
 # arct.peri) ~ water + sand + moss + reft + twigs + herbs
@@ -74,26 +74,26 @@ makeform(spider,1:12,13:15,16:18)
 #>     aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, 
 #>     arct.peri) ~ water + sand + moss + Condition(reft + twigs + 
 #>     herbs)
-#> <environment: 0x55e40981de70>
+#> <environment: 0x555b9a7a5c00>
 # cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, 
 # aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, 
 # arct.peri) ~ water + sand + moss + Condition(reft + twigs + herbs)
 
 makeform(spider,1:12,13:15,maxy=6)
 #> as.matrix(spider[, 1:12]) ~ water + sand + moss
-#> <environment: 0x55e4096a8188>
+#> <environment: 0x555b9a6ac260>
 # as.matrix(spider[, 1:12]) ~ water + sand + moss
 
 makeform(spider,1:3,13:15,FUN=sqrt)
 #> sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ water + sand + 
 #>     moss
-#> <environment: 0x55e409445480>
+#> <environment: 0x555b9a4322e8>
 # sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ water + sand + moss
 
 makeform(spider,1:3,13:15,FUN=sqrt,extra="I(water^2)+")
 #> sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ I(water^2) + water + 
 #>     sand + moss
-#> <environment: 0x55e40926fb40>
+#> <environment: 0x555b9a2590b8>
 # sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ I(water^2) + water + 
 # sand + moss
 ```
