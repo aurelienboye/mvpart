@@ -16,6 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, include = FALSE}
+if (!requireNamespace("MVPARTwrap", quietly = TRUE)) {
+  knitr::opts_chunk$set(eval = FALSE)
+}
+```
+
 ## Introduction
 
 This vignette walks through a complete multivariate regression tree (MRT) analysis, from raw data to interpreted result, using `mvpart` and its companion package `MVPARTwrap`.
@@ -64,7 +70,7 @@ spe.chord <- decostand(spe, "normalize")
 An alternative, and equally common, choice is the **Hellinger transformation**, which uses the square root of relative (rather than raw) abundances:
 
 ```{r}
-# Hellinger transformation (alternative to the chord transformation)
+# Hellinger transformation (alternative to the chord transformation; not used further below)
 spe.hel <- decostand(spe, "hellinger")
 ```
 
@@ -105,7 +111,12 @@ abline(h = 0, lty = 3, col = "grey")
 
 ## Interpreting the groups: MVPARTwrap
 
-`MVPARTwrap` adds tools that make the tree easier to interpret ecologically: which species are driving the split at each node (discriminant species), and how the total species variance is partitioned across the tree.
+`MVPARTwrap` adds tools that make the tree easier to interpret ecologically: which species are driving the split at each node (discriminant species), and how the total species variance is partitioned across the tree. It's not installed automatically alongside `mvpart` — if you don't have it yet:
+
+```r
+# install.packages("remotes")
+remotes::install_github("cran/MVPARTwrap")
+```
 
 ```{r, eval = TRUE}
 library(MVPARTwrap)

@@ -13,11 +13,11 @@ Title: Multivariate partitioning
 Imports: 
     graphics,
     stats,
-    grDevices,
-    MVPARTwrap (>= 0.1.9.2)
+    grDevices
 Suggests: 
     ade4,
     knitr,
+    MVPARTwrap (>= 0.1.9.2),
     rmarkdown,
     survival,
     vegan
