@@ -33,6 +33,19 @@ You can install mvpart from [GitHub](https://github.com/) with:
 remotes::install_github("aurelienboye/mvpart")
 ```
 
+To also build the vignettes locally (so they’re accessible via
+[`vignette()`](https://rdrr.io/r/utils/vignette.html)/[`browseVignettes()`](https://rdrr.io/r/utils/browseVignettes.html)):
+
+``` r
+
+remotes::install_github("aurelienboye/mvpart", build_vignettes = TRUE)
+```
+
+Beware that building the vignettes also requires installing a few
+additional packages (`ade4`, `vegan`, `MVPARTwrap`). Alternatively, the
+worked example is always readable online: [MRT on the Doubs fish
+data](https://aurelienboye.github.io/mvpart/articles/mrt-worked-example.html).
+
 If you’re on an older version of R (≤ 4.1.3) and hit unrelated issues
 with this fork, you may also want to try
 [richardjtelford/mvpart](https://github.com/richardjtelford/mvpart) or

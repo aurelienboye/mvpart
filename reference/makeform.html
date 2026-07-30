@@ -90,14 +90,14 @@ See examples below.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">spider</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">makeform</span><span class="op">(</span><span class="va">spider</span>,<span class="fl">1</span>,<span class="fl">13</span><span class="op">:</span><span class="fl">18</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> arct.lute ~ water + sand + moss + reft + twigs + herbs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b83f4ec80&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec50be688&gt;</span>
 <span class="r-in"><span><span class="co"># arct.lute ~ water + sand + moss + reft + twigs + herbs</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">makeform</span><span class="op">(</span><span class="va">spider</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">12</span>,<span class="fl">13</span><span class="op">:</span><span class="fl">18</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     arct.peri) ~ water + sand + moss + reft + twigs + herbs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b83cd54f0&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec4d6fc30&gt;</span>
 <span class="r-in"><span><span class="co"># cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, </span></span></span>
 <span class="r-in"><span><span class="co"># aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, </span></span></span>
 <span class="r-in"><span><span class="co"># arct.peri) ~ water + sand + moss + reft + twigs + herbs</span></span></span>
@@ -107,26 +107,26 @@ See examples below.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     arct.peri) ~ water + sand + moss + Condition(reft + twigs + </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     herbs)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b83831378&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec8754790&gt;</span>
 <span class="r-in"><span><span class="co"># cbind(arct.lute, pard.lugu, zora.spin, pard.nigr, pard.pull, </span></span></span>
 <span class="r-in"><span><span class="co"># aulo.albi, troc.terr, alop.cune, pard.mont, alop.acce, alop.fabr, </span></span></span>
 <span class="r-in"><span><span class="co"># arct.peri) ~ water + sand + moss + Condition(reft + twigs + herbs)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">makeform</span><span class="op">(</span><span class="va">spider</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">12</span>,<span class="fl">13</span><span class="op">:</span><span class="fl">15</span>,maxy<span class="op">=</span><span class="fl">6</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> as.matrix(spider[, 1:12]) ~ water + sand + moss</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b83670ed8&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec8824190&gt;</span>
 <span class="r-in"><span><span class="co"># as.matrix(spider[, 1:12]) ~ water + sand + moss</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">makeform</span><span class="op">(</span><span class="va">spider</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,<span class="fl">13</span><span class="op">:</span><span class="fl">15</span>,FUN<span class="op">=</span><span class="va">sqrt</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ water + sand + </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     moss</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b834a9540&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec88ab420&gt;</span>
 <span class="r-in"><span><span class="co"># sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ water + sand + moss</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">makeform</span><span class="op">(</span><span class="va">spider</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,<span class="fl">13</span><span class="op">:</span><span class="fl">15</span>,FUN<span class="op">=</span><span class="va">sqrt</span>,extra<span class="op">=</span><span class="st">"I(water^2)+"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ I(water^2) + water + </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     sand + moss</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x555b82f93e68&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55dec8901af8&gt;</span>
 <span class="r-in"><span><span class="co"># sqrt(cbind(arct.lute, pard.lugu, zora.spin)) ~ I(water^2) + water + </span></span></span>
 <span class="r-in"><span><span class="co"># sand + moss</span></span></span>
 <span class="r-in"><span></span></span>
