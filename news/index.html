@@ -3,7 +3,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">mvpart</a>
 
@@ -47,8 +47,6 @@
 </ul></li>
 <li>Root cause: several old C constructs (empty-parameter function pointer declarations, K&amp;R-style function definitions, removed S-compatibility macros/types) that R’s headers used to tolerate are rejected under the C23 standard R 4.5+ selects by default on Windows. Fixes were prototype/declaration additions or macro renames; two genuine latent type-mismatch bugs were also found and fixed (<code>s_xpred.c</code>, <code>xval.c</code>), confirmed to have zero effect on results.</li>
 <li>No changes were made to the package’s statistical logic.</li>
-<li>Updated <code>Maintainer</code>, <code>URL</code>, and <code>Bugs</code> fields to point to this fork.</li>
-<li>Moved <code>MVPARTwrap</code> from <code>Imports</code> to <code>Suggests</code> (it was creating a circular dependency, since <code>MVPARTwrap</code> itself depends on <code>mvpart</code>).</li>
 <li>Added a worked-example vignette (<code>mrt-worked-example</code>), using the Doubs fish dataset, demonstrating a full MRT workflow together with <code>MVPARTwrap</code>.</li>
 </ul></div>
 </div>

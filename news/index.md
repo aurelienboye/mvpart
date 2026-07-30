@@ -17,9 +17,6 @@
   type-mismatch bugs were also found and fixed (`s_xpred.c`, `xval.c`),
   confirmed to have zero effect on results.
 - No changes were made to the package’s statistical logic.
-- Updated `Maintainer`, `URL`, and `Bugs` fields to point to this fork.
-- Moved `MVPARTwrap` from `Imports` to `Suggests` (it was creating a
-  circular dependency, since `MVPARTwrap` itself depends on `mvpart`).
 - Added a worked-example vignette (`mrt-worked-example`), using the
   Doubs fish dataset, demonstrating a full MRT workflow together with
   `MVPARTwrap`.
