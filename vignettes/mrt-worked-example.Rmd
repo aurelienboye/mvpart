@@ -41,7 +41,7 @@ library(vegan)
 We use the Doubs river fish dataset (Verneaux 1973), a classic dataset in numerical ecology consisting of fish abundances, environmental variables, and spatial coordinates for sites along the Doubs river (France/Switzerland border). It's conveniently bundled with the `ade4` package.
 
 ```{r, eval = TRUE}
-data(doubs)
+data(doubs, package = "ade4")
 
 spe <- doubs$fish   # species (fish) abundance data
 env <- doubs$env    # environmental variables
