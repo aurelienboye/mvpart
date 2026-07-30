@@ -1,11 +1,21 @@
 Package: mvpart
 Version: 1.6-4
-Author: rpart by Terry M Therneau and Beth Atkinson <atkinson@mayo.edu>.
-    R port of rpart by Brian Ripley <ripley@stats.ox.ac.uk>.
-    Some routines from vegan -- Jari Oksanen <jari.oksanen@oulu.fi>
-    Extensions and adaptations of rpart to mvpart by Glenn De'ath <g.death@aims.gov.au>.
-    Namespace patch for R 3.6 by Richard Telford <richard.telford@uib.no>.
-Maintainer: Aurélien Boyé <aurelien.boye@ifremer.fr>
+Authors@R: c(
+    person("Glenn", "De'ath", role = "aut", email = "g.death@aims.gov.au",
+           comment = "Original mvpart package author"),
+    person("Terry M", "Therneau", role = "ctb",
+           comment = "Author of the underlying rpart package"),
+    person("Beth", "Atkinson", role = "ctb", email = "atkinson@mayo.edu",
+           comment = "Author of the underlying rpart package"),
+    person("Brian", "Ripley", role = "ctb", email = "ripley@stats.ox.ac.uk",
+           comment = "R port of rpart"),
+    person("Jari", "Oksanen", role = "ctb", email = "jari.oksanen@oulu.fi",
+           comment = "Some routines from vegan"),
+    person("Richard", "Telford", role = "ctb", email = "richard.telford@uib.no",
+           comment = "Namespace patch for R 3.6"),
+    person("Aurélien", "Boyé", role = c("ctb", "cre"), email = "aurelien.boye@ifremer.fr",
+           comment = "Compilation fixes for R 4.5+/4.6+; current maintainer")
+    )
 URL: https://github.com/aurelienboye/mvpart
 Bugs: https://github.com/aurelienboye/mvpart/issues
 Description: Fits multivariate regression trees.
@@ -21,7 +31,6 @@ Suggests:
     rmarkdown,
     survival,
     vegan
-VignetteBuilder: knitr
 LazyData: yes
 ByteCompile: yes
 License: GPL-2 | GPL-3
@@ -31,3 +40,4 @@ RoxygenNote: 6.1.1
 Date: 2026-07-29
 Remotes: 
     cran/MVPARTwrap
+VignetteBuilder: knitr

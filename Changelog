@@ -6,7 +6,7 @@
 2006 Aug 23         1.2-1   Fixed cmds.diss to pass arguments to xdiss and gdist functions
 2004 November 11    1.0-1   Modified extension of rpart
 
-he package MVPART is a modification of RPART --
+The package MVPART is a modification of RPART --
  -- authors of original: Terry M Therneau and Beth Atkinson <atkinson@mayo.edu>, and
  R port of rpart Brian Ripley <ripley@stats.ox.ac.uk>.
 
