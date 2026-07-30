@@ -143,3 +143,9 @@ explanatory sets. Methods in Ecology and Evolution 3:234-244.
 - [`xpred.rpart()`](https://aurelienboye.github.io/mvpart/reference/xpred.rpart.md)
   : Return Cross-Validated Predictions
 
+# Articles
+
+### All vignettes
+
+- [A worked example: multivariate regression trees on the Doubs fish
+  data](https://aurelienboye.github.io/mvpart/articles/mrt-worked-example.md):
