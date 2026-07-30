@@ -19,7 +19,7 @@ techniques should consult that book directly.
 library(mvpart)
 library(ade4)
 library(vegan)
-#> Loading required package: permute
+#> Le chargement a nécessité le package : permute
 ```
 
 ## The data
@@ -120,11 +120,13 @@ mrt <- mvpart(
 #> X-Val rep : 1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100
 #> Minimum tree sizes
 #> tabmins
-#>  2  3  4  7  8  9 
-#>  3  6  4  9 25 53
+#>  2  3  4  6  7  8  9 
+#>  5  4  4  1  1 31 54
 ```
 
-![](mrt-worked-example_files/figure-html/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+
+plot of chunk unnamed-chunk-8
 
 The `xv` argument controls how the final tree size is chosen. `"pick"`
 lets you click interactively on the cross-validation plot (useful in an
@@ -166,7 +168,9 @@ residuals(mrt),main = "Residuals vs Predicted")
 abline(h = 0, lty = 3, col = "grey")
 ```
 
-![](mrt-worked-example_files/figure-html/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
+
+plot of chunk unnamed-chunk-9
 
 ## Interpreting the groups: MVPARTwrap
 
@@ -203,7 +207,9 @@ at a glance how much of the total variance each partition accounts for.
 plot.MRT(mrt.wrap)
 ```
 
-![](mrt-worked-example_files/figure-html/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+
+plot of chunk unnamed-chunk-11
 
 The summary of
 [`summary.MRT()`](https://rdrr.io/pkg/MVPARTwrap/man/help_summaryMRT.html)typically
@@ -242,18 +248,18 @@ summary.MRT(mrt.wrap)
 #> Rham       2          0.7432       0.001
 #> Anan       2          0.7366       0.001
 #> Gogo       2          0.7289       0.001
-#> Cyca       2          0.6998       0.001
+#> Cyca       2          0.6998       0.002
 #> Scer       2          0.6942       0.001
 #> Abbr       2          0.6923       0.001
 #> Spbi       2          0.6200       0.002
 #> Baba       2          0.6170       0.005
-#> Eslu       2          0.5892       0.022
-#> Titi       2          0.5658       0.015
-#> Icme       2          0.5385       0.002
-#> Pefl       2          0.5268       0.021
-#> Chto       2          0.4803       0.022
+#> Eslu       2          0.5892       0.009
+#> Titi       2          0.5658       0.026
+#> Icme       2          0.5385       0.001
+#> Pefl       2          0.5268       0.023
+#> Chto       2          0.4803       0.023
 #> 
-#> Sum of probabilities                 =  0.807
+#> Sum of probabilities                 =  0.834
 #> 
 #> Sum of Indicator Values              =  17.76
 #> 
@@ -271,8 +277,8 @@ summary.MRT(mrt.wrap)
 #>                --- Final partition  ---
 #>  
 #> Sites in the leaf # 2 
-#>  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "9"  "10" "11" "12" "13" "14" "15" "16"
-#> [16] "17"
+#>  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "9"  "10" "11" "12" "13" "14"
+#> [14] "15" "16" "17"
 #> 
 #>  
 #> Sites in the leaf # 3 
@@ -293,19 +299,19 @@ summary.MRT(mrt.wrap)
 #> Blbj       2          0.7692       0.001
 #> Rham       2          0.7432       0.001
 #> Anan       2          0.7366       0.001
-#> Gogo       2          0.7289       0.004
+#> Gogo       2          0.7289       0.001
 #> Cyca       2          0.6998       0.001
 #> Scer       2          0.6942       0.001
 #> Abbr       2          0.6923       0.001
 #> Spbi       2          0.6200       0.004
-#> Baba       2          0.6170       0.003
-#> Eslu       2          0.5892       0.023
-#> Titi       2          0.5658       0.019
+#> Baba       2          0.6170       0.005
+#> Eslu       2          0.5892       0.018
+#> Titi       2          0.5658       0.018
 #> Icme       2          0.5385       0.003
-#> Pefl       2          0.5268       0.027
-#> Chto       2          0.4803       0.021
+#> Pefl       2          0.5268       0.021
+#> Chto       2          0.4803       0.024
 #> 
-#> Sum of probabilities                 =  0.809
+#> Sum of probabilities                 =  0.8
 #> 
 #> Sum of Indicator Values              =  17.76
 #> 
@@ -342,7 +348,9 @@ legend("topleft", legend = levels(groups), col = seq_along(levels(groups)),
        pch = 19, title = "Group", bty = "n")
 ```
 
-![](mrt-worked-example_files/figure-html/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+
+plot of chunk unnamed-chunk-13
 
 ## Going further
 
