@@ -32,7 +32,7 @@ package.
 
 ``` r
 
-data(doubs)
+data(doubs, package = "ade4")
 
 spe <- doubs$fish   # species (fish) abundance data
 env <- doubs$env    # environmental variables
